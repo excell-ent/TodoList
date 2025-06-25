@@ -28,12 +28,24 @@ querySelector('.todo-date').value= "";
 
 
 
-
 document.querySelector('.render-todo').addEventListener('click', function(event) {
   if (event.target.classList.contains('delete-btn')) {
-    const todoItem = event.target.closest('.todo-elem-container');
+    const todoItem = event.target.closest('.todo-style');
     if (todoItem) {
       todoItem.remove();
     }
+  }
+});
+
+
+document.querySelector('.mode-toggle').addEventListener('click', () => {
+  const body = document.body;
+
+  if (body.classList.contains('dark-mode')) {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+  } else {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
   }
 });
