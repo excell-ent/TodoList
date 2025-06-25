@@ -1,16 +1,17 @@
 body{
-    background: white;
+    background: black;
+    color: white
 }
 
 .todo-elem-container{
     display: grid;
     grid-template-columns: 1fr 1fr 0.333fr;
-    column-gap: 10px; 
+    column-gap: 2px; 
     padding: 5px;
 }
 
 .render-todo .todo-style:nth-child(even){
-    color: red;
+    background: #212424f4;
 }
 
 .todo, .todo-date, .delete-btn {
@@ -20,22 +21,91 @@ body{
 .todo{
     color: #320e00;
     height: fit-content;
-    padding: 15px;
+    padding: 15px;    
     border-radius: 10px;
-    background: #ff000a24;
+    background: white;
 }
 
 .todo-date-elem{
     border-radius: 10px;
-    color: #320e00;
+    color: black;
     height: fit-content;
     padding: 15px;
-    background: #ff000a24;
+    background: #ffdfd5;
 }
 
 .delete-btn{
     border: none;
-    background: red;
-    padding: 10px 13px;
+    background: black;
+    padding: 15px 17px;
+    text-align: center;
+    color: white;
     border-radius: 10px;
 }
+
+.todo-input:focus, .todo-date-input:focus{
+    outline: 1px solid black;
+}
+
+
+.todo-input, .todo-date-input, .addTodo-btn{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.addTodo-btn{
+    border: 1px solid green;
+    background: green;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* animations*/
+
+.todo-style {
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.todo-style {
+  animation: slideIn 0.5s;
+  background-color: #f0f0f055;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.delete-btn {
+  transition: opacity 0.5s;
+}
+
+.delete-btn:active {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.todo-style:hover {
+  background-color: black;
+  transition: background-color 0.5s;
+}
+
