@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
-
     <meta charset="UTF-8">
-    <title>Todo list</title>
+    <title>Page title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Todo List</h1>
+    <button class="mode-toggle" aria-label="Toggle night mode">
+  <svg viewBox="0 0 24 24" width="36" height="25" fill="#808080">
+    <path d="M21 12.79A9 9 0 0112.79 3 7 7 0 0012 17a7 7 0 009-4.21z"/>
+  </svg>
+</button>
    
+   
+   <p class="message">add your todos below</p>
     <div>
-        <input type="text" class="todo-js">
+        <input type="text" class="todo-js todo-input">
     </div>
     
     <br>
     
     <div>
-     <input type="date" class="todo-date">
+     <input type="date" class="todo-date todo-date-input">
     </div>
     
     <br>
     
     <div>
-        <input type="submit" value="add todo" onclick="addTodo()">
+        <input type="submit" value="add todo" onclick="addTodo()" class="addTodo-btn">
     </div>
     
     <div>
