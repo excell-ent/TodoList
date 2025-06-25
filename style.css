@@ -1,3 +1,6 @@
+*{
+    text-transform: capitalize;
+}
 body{
     background: black;
     color: white
@@ -6,12 +9,12 @@ body{
 .todo-elem-container{
     display: grid;
     grid-template-columns: 1fr 1fr 0.333fr;
-    column-gap: 2px; 
+    column-gap: 5px; 
     padding: 5px;
 }
 
 .render-todo .todo-style:nth-child(even){
-    background: #212424f4;
+    background: #1f1a1bcd;
 }
 
 .todo, .todo-date, .delete-btn {
@@ -37,7 +40,7 @@ body{
 .delete-btn{
     border: none;
     background: black;
-    padding: 15px 17px;
+    padding: 11px 17px;
     text-align: center;
     color: white;
     border-radius: 10px;
@@ -108,4 +111,3 @@ body{
   background-color: black;
   transition: background-color 0.5s;
 }
-
