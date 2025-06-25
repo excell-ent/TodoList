@@ -1,0 +1,41 @@
+body{
+    background: white;
+}
+
+.todo-elem-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.333fr;
+    column-gap: 10px; 
+    padding: 5px;
+}
+
+.render-todo .todo-style:nth-child(even){
+    color: red;
+}
+
+.todo, .todo-date, .delete-btn {
+    margin-bottom: 20px;
+}
+
+.todo{
+    color: #320e00;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+    background: #ff000a24;
+}
+
+.todo-date-elem{
+    border-radius: 10px;
+    color: #320e00;
+    height: fit-content;
+    padding: 15px;
+    background: #ff000a24;
+}
+
+.delete-btn{
+    border: none;
+    background: red;
+    padding: 10px 13px;
+    border-radius: 10px;
+}
