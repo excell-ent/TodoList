@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Todo list</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <h1>Todo List</h1>
-    <button class="mode-toggle" aria-label="Toggle night mode">
-  <svg viewBox="0 0 24 24" width="36" height="25" fill="#808080">
-    <path d="M21 12.79A9 9 0 0112.79 3 7 7 0 0012 17a7 7 0 009-4.21z"/>
-  </svg>
-</button>
-   
-   
-   <p class="message">add your todos below</p>
-    <div>
-        <input type="text" class="todo-js todo-input">
+<body class="dark-mode">
+
+  <h1>Todo List</h1>
+
+  <!-- Mode Toggle -->
+  <button class="mode-toggle" aria-label="Toggle dark/light mode">
+    <svg viewBox="0 0 24 24" width="36" height="25" fill="#808080">
+      <path d="M21 12.79A9 9 0 0112.79 3 7 7 0 0012 17a7 7 0 009-4.21z"/>
+    </svg>
+  </button>
+
+  <p class="message">add your todos below</p>
+
+  <!-- Input Fields -->
+  <div>
+    <input type="text" class="todo-js todo-input" placeholder="Enter your task">
+  </div>
+
+  <br>
+
+  <div>
+    <input type="date" class="todo-date todo-date-input">
+  </div>
+
+  <br>
+
+  <!-- Add and Clear Buttons -->
+  <div>
+    <button class="add-btn addTodo-btn">add todo</button>
+    <button class="clear-all addTodo-btn" style="margin-left: 10px;">clear all</button>
+  </div>
+
+  <!-- Rendered Todos -->
+  <div>
+    <div class="render-todo"></div>
+  </div>
+
+  <!-- Custom Modal -->
+  <div class="custom-modal hidden">
+    <div class="modal-content">
+      <p class="modal-message">Message</p>
+      <div class="modal-buttons">
+        <button class="modal-ok">OK</button>
+        <button class="modal-cancel hidden">Cancel</button>
+      </div>
     </div>
-    
-    <br>
-    
-    <div>
-     <input type="date" class="todo-date todo-date-input">
-    </div>
-    
-    <br>
-    
-    <div>
-        <input type="submit" value="add todo" onclick="addTodo()" class="addTodo-btn">
-    </div>
-    
-    <div>
-        <p class="render-todo"></p>
-    </div>
-    
-    <script src="todo.js" defer></script>
+  </div>
+
+  <script src="todo.js"></script>
 </body>
 </html>
